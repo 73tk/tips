@@ -39,3 +39,21 @@ var sortDownInArray = function (arr) {
   });
   return arr;
 };
+
+/*
+* 文字列リテラル配列をアルファベット順に並び替え
+* 大文字、小文字が混合する配列にも対応
+*/
+
+var sortAlphabetical = function (arr) {
+  arr.sort(function(a, b){
+    a = a.toString().toLowerCase();
+    b = b.toString().toLowerCase();
+    if(a < b){
+      return -1;
+    }else if(a > b){
+      return 1;
+    }
+    return 0;
+  });
+};
